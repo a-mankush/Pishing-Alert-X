@@ -3,7 +3,7 @@
 1.first clone the repo
 
 ```bash
-git clone https://github.com/a-mankush/Pishing-Alert-X.git ./
+git clone https://github.com/a-mankush/phishing-Alert-X.git ./
 ```
 
 2.Run the bellow command
