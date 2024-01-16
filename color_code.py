@@ -13,7 +13,7 @@ class GetRGBValues:
 
     def get_rgb(self) -> None:
         logging.info("Getting RGB values ...")
-        image = Image.open(self.path.image_path)
+        image: Image = Image.open(self.path.image_path)
 
         # Convert the image to a list of RGB tuples
         pixels = list(image.getdata())
