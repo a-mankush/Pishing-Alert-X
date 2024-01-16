@@ -1,0 +1,34 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Screenshot App</title>
+    <style>
+        img {
+            height: 250px;
+            width: 500px;
+        }
+        span{
+            height: 50px;
+            width: 50px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask Screenshot App</h1>
+    <img src="{{ url_for('static', filename='screenshot.png') }}" alt="Screenshot">
+    <h2>Top 6 RGB Values</h2>
+    <ul>
+        {% for color_info in colors_info %}
+            <li>
+                Color {{ loop.index }}:
+                <span style="background-color: {{ color_info.hex_color }}"> _______________</span>
+                <p>RGB: {{ color_info.rgb }} - Count: {{ color_info.count }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
