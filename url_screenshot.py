@@ -26,7 +26,7 @@ class GetScreenshots:
         try:
             option = Options()
             option.add_argument("--headless")
-            driver = webdriver.Chrome(service=self.s, options=option)
+            driver = webdriver.Chrome(service=self.s)
 
             driver.set_page_load_timeout(30)
 

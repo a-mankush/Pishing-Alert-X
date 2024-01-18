@@ -1,6 +1,6 @@
-Color 1: #1e2933 RGB: (30, 41, 51) - Count: 110078 
-Color 2: #1c3b56 RGB: (28, 59, 86) - Count: 82485 
-Color 3: #3776ab RGB: (55, 118, 171) - Count: 18658 
-Color 4: #1e415e RGB: (30, 65, 94) - Count: 16293 
-Color 5: #f1f1f1 RGB: (241, 241, 241) - Count: 13694 
-Color 6: #2a5981 RGB: (42, 89, 129) - Count: 9400 
+Color 1: #ffffff RGB: (255, 255, 255) - Count: 896859 
+Color 2: #f2f2f2 RGB: (242, 242, 242) - Count: 213331 
+Color 3: #f8f9fa RGB: (248, 249, 250) - Count: 19396 
+Color 4: #1a73e8 RGB: (26, 115, 232) - Count: 13979 
+Color 5: #4285f4 RGB: (66, 133, 244) - Count: 6586 
+Color 6: #ea4335 RGB: (234, 67, 53) - Count: 3319 
