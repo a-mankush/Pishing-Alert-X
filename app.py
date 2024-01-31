@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 from color_code import GetRGBValues
 from url_screenshot import GetScreenshots
@@ -6,12 +6,15 @@ from url_screenshot import GetScreenshots
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    # ss = GetScreenshots()
-    # ss.get_screenshots("https://www.python.org/")
+    if request.method == "GET":
+        return render_template("form.html")
+    url: str | None = request.form.get("url")
+    ss = GetScreenshots()
+    ss.get_screenshots(url)
     val = GetRGBValues()
-    colors_info = val.get_rgb()
+    colors_info: list[dict] = val.get_rgb()
     return render_template("index.html", colors_info=colors_info)
 
 
