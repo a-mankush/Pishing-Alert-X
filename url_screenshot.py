@@ -22,7 +22,7 @@ class GetScreenshots:
         self.paths = PathConfig()
         self.s = Service(self.paths.chrome_driver_path)
 
-    def get_screenshots(self, url: str) -> None:
+    def get_screenshots(self, url: str, save_screenshot: bool) -> None:
         try:
             option = Options()
             option.add_argument("--headless")
@@ -31,7 +31,11 @@ class GetScreenshots:
             driver.set_page_load_timeout(30)
 
             driver.get(url)
-            driver.save_screenshot(self.paths.image_path)
+            if save_screenshot:
+                logging.info("Saving screenshot in flies is triggered")
+                driver.save_screenshot("Screenshots/url.png")
+            else:
+                driver.save_screenshot(self.paths.image_path)
             driver.quit()
             logging.info("Get the screenshot Successfully...")
 

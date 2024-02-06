@@ -12,8 +12,8 @@ def index():
         return render_template("form.html")
     url: str | None = request.form.get("url")
     ss = GetScreenshots()
-    ss.get_screenshots(url)
-    val = GetRGBValues()
+    ss.get_screenshots(url, save_screenshot=True)
+    val = GetRGBValues(6)
     colors_info: list[dict] = val.get_rgb()
     return render_template("index.html", colors_info=colors_info)
 
