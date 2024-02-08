@@ -4,7 +4,7 @@ import pandas as pd
 from color_code import GetRGBValues
 from url_screenshot import GetScreenshots, PathConfig
 
-df = pd.read_csv("notebook/data/dataset_B_05_2020.csv").head()
+df = pd.read_csv("notebook/data/dataset_B_05_2020.csv")[:500]
 
 
 class Helpers:
@@ -34,4 +34,4 @@ df["color_1"] = df["url"].apply(lambda x: get_deci(x))
 # data['color_1'] = data['hash'].apply(lambda x: getColors(x, 3, 0))
 print(df[["url", "color_1"]])
 
-print(df.corr()["status"])
+df.to_csv("new_df_0_500.csv", index=False)

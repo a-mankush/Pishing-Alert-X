@@ -29,7 +29,7 @@ class GetScreenshots:
             driver = webdriver.Chrome(service=self.s)
 
             driver.set_page_load_timeout(30)
-
+        
             driver.get(url)
             if save_screenshot:
                 logging.info("Saving screenshot in flies is triggered")
